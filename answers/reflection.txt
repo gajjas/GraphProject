@@ -1,0 +1,10 @@
+1. 
+I could have thought through the ways to implement the Graph ADT before
+I wrote the methods and specifications.
+
+2.
+A little bit more clarity on directions would've helped.
+
+3.
+I now know how to use iterators in Java. If i knew this before it would've saved
+me time on this homework.

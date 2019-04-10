@@ -1,0 +1,25 @@
+1)
+Function Subtypes of A.m are
+
+X m(X y, String s);
+Z m(Y y, String s);
+
+------------------------------------
+X m(X y, String s);        ======  Override
+Y m(Object y, Object s);   ======  Overload
+Z m(Y y, String s);        ======  Overload
+
+
+2)
+a)
+This IsoscelesTriangle subtype is a true subtype of Triangle because it has the same amount of sides and follows the triangle class.
+
+b)
+The human class is a true subtype of Vertabrate because it has a stronger postcondition than Vertabrates and similar behavior. The squid class is not a
+true subtype because 0 when Vertabrate returns an int neckbones() > 0. this does follow vertabrate.
+
+c)
+This is a true Subtype because there is same behavior between the Bicycle and Mountain bike class.
+
+d)
+This is not a true subtype because the concurrent account can return an exception which the client does not expect. 

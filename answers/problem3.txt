@@ -1,0 +1,9 @@
+My representation has a object for a Node, Graph, and an Edge. The Edge just holds the parent Node name, child node Name, and the edge Label. 
+The Node object holds its name and the Edges that point away from it in alphabetical order of their edgeLabel's in an arraylist.
+The Graph holds theses nodes in alphabetical order by their names also in an arrayList.
+
+The collection of edges there is easy iteration through edges.
+For the Adjacency list can get outgoing edges in constant time.
+For the adjacency matrix we can get the number of edges that connect two nodes in constant time.
+The advantage for my representations is that it is way better to visualize in creating the graph and searching can take log n time 
+for nodes or edges since they are alphabetically sorted.

@@ -1,0 +1,379 @@
+/**
+ * 
+ * Edge represents an mutable directed-edge in a Directed Graph. A directed edge connects two nodes, one ParentNode that the edge
+ * points from and one ChildNode that the edge points two.
+ * 
+ */
+public class Edge {
+	
+	private String edgeLabel;
+	private String ParentNode;
+	private String ChildNode;
+	
+	//Abstraction Function:
+	//edgeLabel is the label or length of the edge
+	//ParentNode is the name of the node this edge comes out from
+	//ChildNode is the name of the node that this edge points to
+	//
+	//Representation invariant for every Edge e:
+	//ParentNode, ChildNode, and edgeLabel in e are not null 
+	
+	/**
+	 * 
+	 * @param length The label of that edge
+	 * @param parentNode The Node name that the edge will point from
+	 * @param childNode The Node name that the edge will point to
+	 * @modifies this.edgeLabel, this.ParentNode, this.ChildNode
+	 * @effects Constructs a new Edge with the specified parameters of parentNode and childNode and label
+	 * 
+	 */
+	public Edge(String label, String parentNode, String childNode)
+	{
+		return;
+	}
+	
+	/**
+	 * @return The parentNode that this edge is pointing from(this.ParentNode)
+	 */
+	public String getParent()
+	{
+		return null;
+	}
+	
+	/**
+	 * @return The childNode that this edge is pointing to (this.ChildNode)
+	 */
+	public String getChild()
+	{
+		return null;
+	}
+	
+	/**
+	 * @return The edgeLabel of this (this.edgeLabel)
+	 */
+	public String getLabel()
+	{
+		return null;
+	}
+	
+	/**
+	 * 
+	 * @param e An Edge to compare with
+	 * @requires e != null
+	 * @return boolean true if this.ParentNode == e.getParent() && this.ChildNode == e.getChild()
+	 *
+	 */
+	public boolean equals(Edge e)
+	{
+		throw new RuntimeException("Did not implement this method");
+	}
+	
+	/**
+	 * Checks that the representation invariant holds (if any).
+	 */
+	// Throws a RuntimeException if the rep invariant is violated.
+	public void checkRep()
+	{
+		return;
+	}
+	
+}
+
+---------------------------------------------------------------------------------------------
+
+/**
+ * 
+ * Node represents an mutable Node in a Directed Graph. A node is a vertex in a graph and can have infinite 
+ * edges pointing to and away from it.
+ * 
+ */
+public class Node {
+	
+	String name;
+	ArrayList<Edge> edges;
+	
+	//Abstraction Function
+	//name is the name that is given to the Node
+	//ArrayList<Edeges> edges are the edges that go out of the nodes in the graph if any
+	//
+	//Representation invariant for every Node n:
+	//All the edges in e are not repeating where if two edges have the same parent node and child node as each other
+	//there would only be one edge that resembles both same edges
+	//edges is sorted lexicographically by edgeLabel
+	//name != null
+	//
+	
+	/**
+	 * @param Name
+	 * @effects Constructs a new Node with this.edges.length = 0
+	 */
+	public Node(String Name)
+	{
+		return;
+	}
+	
+	/**
+	 * @return The Number of edges going out of this node or this.edges.length
+	 */
+	public int NumOfEdges()
+	{
+		throw new RuntimeException("Not yet Implemented!!!");
+	}
+	
+	/**
+	 * 
+	 * @param e the edge that is to be added
+	 * 
+	 * @requires e != null
+	 * @modifies this.edges
+	 * @effects Adds a new Edge to the edges ArrayList and places it in the correct spot if not already in it
+	 * 			If node with the same name is found, does not add edge, no duplicate edges
+	 * 
+	 */
+	public void addEdge(Edge e)
+	{
+		return;
+	}
+	
+	/**
+	 * 
+	 * @param parentNode The parent node of the edge that is to be added
+	 * @param childNode	The child node of the edge that is to be added
+	 * @param edgeLabel The label for the edge that is to be added
+	 * 
+	 * @requires parentNode != null && childNode != null && edgeLabel != null
+	 * @modifies this.edges
+	 * @effects Adds a new Edge to the edges ArrayList and places it in the correct spot if not already in it
+	 *			If node with the same name is found, does not add edge, no duplicate edges
+	 * 
+	 */
+	public void addEdge(String edgeLabel, String parentNode, String childNode)
+	{
+		return;
+	}
+	
+	/**
+	 * @return The name of this node (this.name)
+	 */
+	public String getName()
+	{
+		return;
+	}
+	
+	/**
+	 * @return the list of edges coming off of the node or this.edges
+	 */
+	public ArrayList<Edge> getEdges()
+	{
+		return null;
+	}
+	
+	/**
+	 * Checks that the representation invariant holds (if any).
+	 */
+	// Throws a RuntimeException if the rep invariant is violated.
+	public void checkRep()
+	{
+		return;
+	}
+	
+}
+
+---------------------------------------------------------------------------------------------
+
+/**
+ * 
+ * Graph represents a mutable directed-graph. A graph is a collection of nodes and edges. 
+ * 
+ */
+public class Graph {
+	
+	private ArrayList<Node> nodes;
+	private int edges;
+	
+	//Abstraction Function:
+	//ArrayList<Node> nodes are all the nodes in the graph
+	//edges are the number of edges in the graph
+	//
+	//Representation invariant for every Graph g:
+	//There can never be any duplicate Nodes in nodes
+	//edges are the number of edges in the node
+	//
+	
+	/**
+	 * @effects Constructs a new Graph with this.nodes.length = 0 or empty list
+	 */
+	public Graph()
+	{
+		return;
+	}
+	
+	/**
+	 * @return int the number of edges in the graph or this.edges
+	 */
+	public int getNumOfEdges()
+	{
+		throw new RuntimeException("Not Yet Implemented!!!");
+	}
+	
+	/**
+	 * @return int number of nodes currently in the graph or this.nodes.size()
+	 */
+	public int NumOfNodes()
+	{
+		throw new RuntimeException("Not Yet Implemented!!!");
+	}
+		
+	/**
+	 * 
+	 * @param the node n that is to be added
+	 * 
+	 * @requires n != null
+	 * @modifies this.nodes
+	 * @effects Adds Node n  to the respective place in the this.nodes
+	 * 
+	 */
+	public void addNode(Node n)
+	{
+		return;
+	}
+	
+	/**
+	 * Verifies the edges
+	 * @modifies this.edges
+	 * @effects changes the number of edges in the graph if necessary
+	 */
+	public void verifyEdges()
+	{
+		return;
+	}
+	
+	/**
+	 * 
+	 * @param name the name of the node that is to be added
+	 * 
+	 * @requires name != null
+	 * @modifies this.nodes
+	 * @effects Creates a Node n and adds it to the respective place in the this.nodes
+	 * 
+	 */
+	public void addNode(String name)
+	{
+		return;
+	}
+	
+	/**
+	 * 
+	 * @param e the edge that is to be added
+	 * 
+	 * @requires e != null
+	 * @modifies edges of one node in this.nodes
+	 * @effects Adds a Edge e to the edges ArrayList and places it in the correct spot if the node exists in this.nodes
+	 * 			and the parent node has no duplicate edge already
+	 * 
+	 */
+	public void addEdge(Edge e)
+	{
+		return;
+	}	
+	
+	/**
+	 * 
+	 * @param parentNode The parent node of the edge that is to be added
+	 * @param childNode	The child node of the edge that is to be added
+	 * @param edgeLabel The label for the edge that is to be added
+	 * 
+	 * @requires parentNode != null && childNode != null && edgeLabel != null
+	 * @modifies nodes in this.nodes
+	 * @effects Adds a new Edge to the edges ArrayList and places it in the correct spot if the node exists in this.nodes
+	 * 			and the parent node has no duplicate edge already
+	 * 
+	 */
+	public void addEdge(String parentNode, String childNode, String edgeLabel)
+	{
+		return;
+	}
+	
+	/**
+	 * @return ArrayList<Edge> of the nodes in this graph or this.nodes
+	 */
+	public ArrayList<Edge> getNodes()
+	{
+		return null;
+	}
+	
+	/**
+	 * Checks that the representation invariant holds (if any).
+	 */
+	// Throws a RuntimeException if the rep invariant is violated.
+	public void checkRep()
+	{
+		return;
+	}
+}
+
+
+---------------------------------------------------------------------------------------------
+
+\\GraphWrapper
+public class GraphWrapper{
+	private Graph g;
+	
+	/**
+	 * @effects Constructs a new GraphWrapper
+	 */
+	public GraphWrapper()
+	{
+		return;
+	}
+	
+	/**
+	 * 
+	 * @param nodeData the name of the node that is to be added
+	 * 
+	 * @requires nodeData != null
+	 * @modifies this.g.nodes
+	 * @effects Creates a Node n and adds it to the respective place in the this.g.nodes
+	 * 
+	 */
+	public void addNode(String nodeData)
+	{
+		return;
+	}
+	
+	/**
+	 * 
+	 * @param parentNode
+	 * @param childNode
+	 * @param edgeLabel
+	 * 
+	 * @requires parentNode != null && childNode != null && edgeLabel != null
+	 * @modifies edges of one node in this.g.nodes
+	 * @effects Adds a new Edge to the edges ArrayList in this.g and places it in the correct spot if the node exists in this.nodes
+	 * 			and the parent node has no duplicate edge already
+	 */
+	public void addEdge(String parentNode, String childNode, String edgeLabel)
+	{
+		return;
+	}
+	
+	/**
+	 * @return Iterator<String> of all the nodes' names in g in lexicographical order
+	 */
+	public Iterator<String> listNodes()
+	{
+		return null;
+	}
+	
+	/**
+	 * 
+	 * @param parentNode
+	 * 
+	 * @requires parentNode != null
+	 * @return Iterator<String> of all the edges' edgeLabels in the given parentNode if in g in lexicographical order
+	 */
+	public Iterator<String> listChildren(String parentNode)
+	{
+		return null;
+	}
+}
