@@ -1,4 +1,0 @@
-I changed the sorting of edges in node class because i felt i have done the wrong sorting and will get the wrong output.
-
-I changed the data structure in the graph class from a list of nodes to a HashMap<String, Node> because i needed a faster way to access
-the nodes rather than just look through them. This make it go from O(n) to O(1) to get nodes. 

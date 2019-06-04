@@ -1,8 +1,0 @@
-1. In retrospect, what could you have done better to reduce the time you spent solving this
-assignment?
-	I could have understood the directions better.
-2. What could the course staff have done better to improve your learning experience in this
-assignment?
-	The directions could have been more clear so that there wasn't much confusion on the way we implement the algorithm.
-3. What do you know now that you wish you had known before beginning the assignment?
-	I wish that I knew about the memory errors.
